@@ -1,4 +1,4 @@
-FROM node:18-bookworm
+FROM node:20-bookworm
 
 # Actualizar e instalar dependencias del sistema necesarias para FFmpeg, yt-dlp y Puppeteer
 RUN apt-get update && apt-get install -y \
