@@ -40,9 +40,9 @@ COPY . .
 # Crear la carpeta de descargas temporal
 RUN mkdir -p downloads
 
-# Koyeb utiliza el puerto 8000 por defecto para contenedores web
-ENV PORT=8000
-EXPOSE 8000
+# Google Cloud Run utiliza el puerto 8080 por defecto
+ENV PORT=8080
+EXPOSE 8080
 
 # Comando para iniciar el servidor
 CMD ["npm", "start"]
