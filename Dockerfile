@@ -1,6 +1,6 @@
 FROM node:20-bookworm
 
-# Instalar dependencias del sistema necesarias para FFmpeg, yt-dlp y Puppeteer
+# Actualizar e instalar dependencias del sistema necesarias para FFmpeg, yt-dlp y Puppeteer
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     python3 \
@@ -40,9 +40,9 @@ COPY . .
 # Crear la carpeta de descargas temporal
 RUN mkdir -p downloads
 
-# Hugging Face Spaces requiere el puerto 7860
-ENV PORT=7860
-EXPOSE 7860
+# Koyeb utiliza el puerto 8000 por defecto para contenedores web
+ENV PORT=8000
+EXPOSE 8000
 
 # Comando para iniciar el servidor
 CMD ["npm", "start"]
