@@ -1,6 +1,6 @@
-FROM node:18-bullseye
+FROM node:18-bookworm
 
-# Instalar dependencias del sistema necesarias para FFmpeg, yt-dlp y Puppeteer
+# Actualizar e instalar dependencias del sistema necesarias para FFmpeg, yt-dlp y Puppeteer
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     python3 \
